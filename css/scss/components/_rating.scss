@@ -1,0 +1,41 @@
+.rating {
+	display: flex;
+	justify-content: space-between;
+	width: 120px;
+
+	&__circle {
+			width: 20px;
+			height: 20px;
+			border: 1px solid $yellow-color;
+			border-radius: 50%;
+			position: relative;
+			overflow: hidden;
+			background: transparent;
+
+			&--review {
+				width: 13px;
+				height: 13px;
+			}
+
+			&::before {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: $yellow-color;
+					transform-origin: left center;
+					transform: scaleX(0);
+			}
+
+			&.full::before {
+					transform: scaleX(1);
+			}
+
+			&.half::before {
+					transform: scaleX(0.5);
+			}
+	}
+}

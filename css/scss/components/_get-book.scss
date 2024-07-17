@@ -1,0 +1,34 @@
+.get-book {
+	background-color: $dark-blue-color;
+	padding-block: 70px;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		color: #ffffff;
+	}
+
+	&__text {
+		max-width: 539px;
+	}
+
+	&__subtitle {
+		margin-top: 54px;
+		font-size: 19px;
+		line-height: 28px;
+		color: $light-color;
+	}
+
+	&__img {
+		max-width: 560px;
+	}
+
+	&__btn {
+		margin-top: 27px;
+		color: #ffffff;
+	}
+}

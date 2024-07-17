@@ -1,0 +1,10 @@
+.authors-book {
+	padding-block: 110px 90px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+		margin-top: 96px;
+	}
+}

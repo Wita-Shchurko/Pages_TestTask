@@ -1,0 +1,60 @@
+.header {
+	background-color: $dark-blue-color;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		padding-block: 20px;
+		gap: 20px;
+	}
+
+	&__block {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__logo {
+		height: 35px;
+	}
+
+	&__menu-list {
+		display: flex;
+		gap: 8px;
+		padding: 0;
+	}
+
+	&__menu-item {
+		list-style-type: none;
+	}
+
+	&__menu-link {
+		display: block;
+		padding: 20px 10px;
+		text-decoration: none;
+		color: #ffffff;
+		transition: all $duration-time;
+
+		span {
+			color: #000000;
+		}
+
+		&:hover {
+			color: $yellow-color;
+			transform: scale(1.2);
+
+			span {
+				color: $yellow-color;
+			}
+		}
+	}
+
+	&__order-btn {
+		flex-grow: 1;
+		width: 100%;
+		max-width: 222px;
+		display: block;
+		padding-inline: 15px;
+	}
+}

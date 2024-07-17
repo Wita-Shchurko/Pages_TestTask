@@ -1,0 +1,35 @@
+.button {
+	cursor: pointer;
+	font-family: 'Cardo';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 28px;
+	letter-spacing: 0.57px;
+	text-transform: capitalize;
+	padding: 17px 51px;
+	color: $dark-blue-color;
+	background-color: $yellow-color;
+	border: 2px solid $yellow-color;
+	transition: border $duration-time, background-color $duration-time, color $duration-time;
+
+	&:hover {
+		border: 2px solid $yellow-color;
+		background-color: transparent;
+		color: $yellow-color;
+	}
+
+	&--transparent {
+		border: 2px solid $yellow-color;
+		background-color: transparent;
+
+		&:hover {
+			background-color: $yellow-color;
+			color: #ffffff;
+		}
+	}
+
+	&:active {
+		transform: scale(0.9);
+	}
+}

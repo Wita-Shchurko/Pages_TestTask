@@ -1,0 +1,90 @@
+.initial {
+	padding-block: 100px;
+	background-color: $dark-blue-color;
+
+	&__container {
+		display: grid;
+		grid-template: auto / auto minmax(auto, 632px);
+		justify-content: space-between;
+		gap: 15px;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 48px;
+		max-width: 562px;
+	}
+
+	&__title {
+		font-family: 'Cardo';
+		font-size: 64px;
+		line-height: 78px;
+		letter-spacing: 1.3px;
+		font-weight: 400;
+		margin: 0;
+	}
+
+	&__pretitle {
+		position: relative;
+		padding-left: 50px;
+		font-size: 21px;
+		line-height: 36px;
+		letter-spacing: 1.2px;
+		text-transform: capitalize;
+		display: block;
+		margin-bottom: 15px;
+
+		&::before {
+			position: absolute;
+			content: "";
+			height: 2px;
+			width: 35px;
+			background: $yellow-color;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+		}
+	}
+
+	&__subtitle {
+		margin: 0;
+		font-size: 18px;
+		line-height: 28px;
+		color: $light-color;
+	}
+
+	&__btns {
+		display: flex;
+		gap: 50px;
+		align-items: center;
+	}
+
+	&__read-demo-link {
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 19px;
+		line-height: 30px;
+		letter-spacing: 0.38px;
+		text-transform: capitalize;
+		text-decoration: none;
+		color: #FFFFFF;
+		border-bottom: 1px solid #ffffff;
+		padding: 0 9px 4px 0;
+		transition: all $duration-time;
+
+		&:hover {
+			color: $yellow-color;
+			border-bottom: 1px solid $yellow-color;
+			transform: scale(1.1);
+		}
+	}
+
+	&__img {
+		justify-self: center;
+		width: 100%;
+		max-width: 592px;
+	}
+}

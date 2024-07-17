@@ -1,0 +1,20 @@
+{
+  "name": "testtask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier . --ignore-path .gitignore --write",
+    "lint": "eslint . --ignore-path .gitignore --fix",
+    "fix": "npm run format & npm run lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@mate-academy/eslint-config": "^0.0.29",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0"
+  }
+}

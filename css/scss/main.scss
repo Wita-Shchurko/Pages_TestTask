@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@100..900&display=swap');
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./components/social";
+@import "./components/button";
+@import "./components/title";
+@import "./components/book-info";
+@import "./components/book-card";
+@import "./components/enhance-card";
+@import "./components/rating";
+@import "./components/review-card";
+@import "./components/articles-card";
+
+@import "./components/header";
+@import "./components/initial";
+@import "./components/authors-book";
+@import "./components/author";
+@import "./components/trusted";
+@import "./components/get-book";
+@import "./components/what-will-you-learn";
+@import "./components/enhance";
+@import "./components/reviews";
+@import "./components/articles";
+@import "./components/subscribe";
+@import "./components/footer";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.body {
+	font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+	color: #FFFFFF;
+}
+
+.container {
+	margin: 0 auto;
+	padding-inline: 70px;
+	max-width: 1440px;
+}

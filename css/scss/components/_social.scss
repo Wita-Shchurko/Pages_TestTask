@@ -1,0 +1,24 @@
+.social {
+	flex-wrap: wrap;
+	display: flex;
+	gap: 10px;
+
+	&__link {
+		height: 45px;
+		width: 45px;
+		background-color: #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		color: #000000;
+		transition: all $duration-time;
+
+		&:hover {
+			border: 1px solid $yellow-color;
+			background-color: transparent;
+			color: #ffffff;
+			transform: scale(1.1);
+		}
+	}
+}

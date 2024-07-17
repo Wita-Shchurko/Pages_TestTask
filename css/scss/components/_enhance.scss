@@ -1,0 +1,32 @@
+.enhance {
+	background-color: #F4F8FF;
+	padding-block: 100px 120px;
+
+	&__wrapper {
+		margin-top: 96px;
+		display: grid;
+		column-gap: 30px;
+		row-gap: 40px;
+		grid-template: repeat(2, auto) / repeat(2, auto);
+	}
+
+	&__btn {
+		display: block;
+		margin: 0 auto;
+		margin-top: 60px;
+		padding-inline: 92px;
+	}
+
+	&__addition {
+		margin-top: 34px;
+		font-size: 18px;
+		line-height: 28px;
+		text-align: center;
+		color: #969AA0;
+	}
+
+	&__questions-link {
+		color: #1B3764;
+		text-decoration: none;
+	}
+}

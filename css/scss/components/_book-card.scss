@@ -1,0 +1,62 @@
+.book-card {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	&__img {
+		width: 100%;
+		max-width: 285px;
+		min-width: 120px;
+	}
+
+	&__info {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		min-width: 190px;
+	}
+
+	&__title {
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 38px;
+		letter-spacing: 0.32px;
+		color: $dark-blue-color;
+	}
+
+	&__price {
+		font-size: 22px;
+		line-height: 33px;
+		color: $yellow-color;
+	}
+
+	&__description {
+		font-size: 19px;
+		line-height: 28px;
+		color: #969AA0;
+		max-width: 287px;
+	}
+
+	&__type {
+		position: relative;
+		padding-left: 26px;
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+		color: $dark-blue-color;
+		@include circle;
+	}
+
+	&__order-btn {
+		width: 100%;
+		flex-grow: 1;
+		max-width: 206px;
+		display: block;
+		padding-inline: 15px;
+	}
+}

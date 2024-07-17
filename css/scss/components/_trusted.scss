@@ -1,0 +1,38 @@
+.trusted {
+	padding-block: 110px 130px;
+
+	&__companies {
+		margin-top: 76px;
+		display: flex;
+		gap: 10px;
+		justify-content: space-between;
+	}
+
+	&__company {
+		max-width: 313px;
+		text-align: center;
+	}
+	
+	&__company-img {
+		display: block;
+		height: 100px;
+		margin: 0 auto;
+	}
+
+	&__company-name {
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+		color: $dark-blue-color;
+		margin-top: 20px;
+	}
+
+	&__company-description {
+		font-size: 19px;
+		line-height: 28px;
+		color: #969AA0;
+		margin-top: 20px;
+	}
+}

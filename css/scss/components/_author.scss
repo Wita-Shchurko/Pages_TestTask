@@ -1,0 +1,123 @@
+.author {
+	padding-block: 140px;
+	background-color: $light-bg-color;
+
+	&__container {
+		position: relative;
+		display: flex;
+		gap: 30px;
+		justify-content: space-between;
+	}
+
+	&__img-container {
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			padding-top: calc(100% * 620 / 525);
+			background: transparent;
+			border: 10px solid $yellow-color;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			max-width: 525px;
+			min-width: 300px;
+			max-height: 620px;
+	}
+	}
+
+	&__img {
+		width: 100%;
+		max-width: 525px;
+		min-width: 300px;
+		position: relative;
+		top: -30px;
+		left: -30px;
+	}
+
+	&__info {
+		max-width: 605px;
+	}
+
+	&__description {
+		margin-top: 60px;
+		font-size: 19px;
+		line-height: 34px;
+		color: #969AA0;
+	}
+
+	&__statistic {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__statistic-item {
+		font-size: 17px;
+		line-height: 22px;
+		color: #969AA0;
+
+		span {
+			display: block;
+			font-family: 'Cardo';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 54px;
+			line-height: 77px;
+			color: $dark-blue-color;
+		}
+	}
+
+	&__statistic-divider {
+		height: max;
+		width: 1px;
+		background-color: $yellow-color;
+	}
+
+	&__contacts {
+		max-width: 484px;
+		margin-top: 55px;
+		background-color: $dark-blue-color;
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	&__qr-code {
+		width: 130px;
+		height: 130px;
+	}
+
+	&__contacts-info {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__name {
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 22px;
+		line-height: 26px;
+		color: $yellow-color;
+	}
+
+	&__mail, &__phone {
+		font-size: 18px;
+		line-height: 28px;
+		letter-spacing: 0.19px;
+		color: #B4C7E7;
+		cursor: pointer;
+		text-decoration: none;
+		transition: all $duration-time;
+
+		&:hover {
+			color: $yellow-color;
+			text-decoration: underline;
+		}
+	}
+}

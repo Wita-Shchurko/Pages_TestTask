@@ -1,0 +1,138 @@
+.footer {
+	padding-block: 92px 24px;
+	background-color: $dark-blue-color;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+	}
+
+	&__logo {
+		height: 35px;
+		margin-bottom: 20px;
+	}
+
+	&__social {
+		display: flex;
+		gap: 10px;
+	}
+
+	&__social-link {
+		height: 55px;
+		width: 55px;
+		border: 1px solid $yellow-color;
+		background-color: transparent;
+		color: #ffffff;
+		transition: all $duration-time;
+
+		&:hover {
+			background-color: $yellow-color;
+			color: $dark-blue-color;
+		}
+	}
+
+	&__title {
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 34px;
+		letter-spacing: 0.384px;
+	}
+
+	&__list {
+		list-style-type: none;
+		margin: 24px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+	}
+
+	&__item {
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 4px;
+			width: 19px;
+			background-image: url('../../assets/images/threeCorcles.svg');
+			background-repeat: no-repeat;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -28px;
+			border-radius: 100px;
+			transition: all $duration-time;
+		}
+
+		
+		&:hover:before {
+			left: -35px;
+		}
+	}
+
+	&__link {
+		display: block;
+		text-decoration: none;
+		font-size: 18px;
+		line-height: 31px;
+		letter-spacing: 0.18px;
+		color: #B4C7E7;
+		transition: all $duration-time;
+
+		&:hover {
+			color: $yellow-color;
+		}
+	}
+
+	&__contacts {
+		margin-top: 28px;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+
+	&__contact {
+		display: flex;
+		gap: 6px;
+	}
+
+	&__contact-title {
+		display: block;
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: 0.36px;
+		width: 104px;
+	}
+
+	&__address {
+		font-size: 17px;
+		line-height: 27px;
+		color: #B4C7E7;
+		text-decoration: none;
+		transition: all $duration-time;
+
+		&:hover {
+			color: $yellow-color;
+			text-decoration: underline;
+		}
+	}
+
+	&__copy {
+		margin-top: 85px;
+		font-size: 17px;
+		line-height: 26px;
+		text-align: center;
+		letter-spacing: 0.17px;
+		color: $light-color;
+
+		span {
+			color: #ffffff;
+		}
+	}
+}

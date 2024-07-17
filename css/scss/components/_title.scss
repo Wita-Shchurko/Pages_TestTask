@@ -1,0 +1,32 @@
+.title {
+	position: relative;
+	font-family: 'Cardo';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 42px;
+	line-height: 50px;
+	text-align: center;
+	text-transform: capitalize;
+	color: $dark-blue-color;
+	margin: 0;
+
+	&::after {
+		content: "";
+		position: absolute;
+		height: 3px;
+		width: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -25px;
+		background-color: $yellow-color;
+	}
+
+	&--left {
+		text-align: left;
+
+		&::after {
+			left: 0;
+			transform: translateX(0%);
+		}
+	}
+}

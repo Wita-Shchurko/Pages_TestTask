@@ -1,0 +1,26 @@
+.book-info {
+	display: flex;
+	justify-content: space-between;
+
+	&__block {
+		position: relative;
+		padding-left: 25px;
+		@include circle;
+	}
+
+	&__title {
+		font-family: 'Cardo';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+		letter-spacing: 0.48px;
+	}
+
+	&__value {
+		font-size: 17px;
+		line-height: 27px;
+		color: $light-color;
+		padding-top: 12px;
+	}
+}
