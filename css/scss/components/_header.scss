@@ -1,5 +1,7 @@
 .header {
+	position: relative;
 	background-color: $dark-blue-color;
+	z-index: 100;
 
 	&__container {
 		display: flex;
@@ -13,10 +15,26 @@
 		display: flex;
 		align-items: center;
 		gap: 30px;
+
+		@include onPhone {
+			width: fit-content;
+		}
 	}
 
 	&__logo {
 		height: 35px;
+	}
+
+	&__menu {
+		@include onTablet {
+			display: none;
+		}
+	}
+
+	&__social {
+		@include onTablet {
+			display: none;
+		}
 	}
 
 	&__menu-list {
@@ -46,6 +64,15 @@
 
 			span {
 				color: $yellow-color;
+
+				@include onTablet {
+					color: #000000;
+				}
+			}
+
+			@include onTablet {
+				color: #ffffff;
+				transform: scale(1);
 			}
 		}
 	}
@@ -56,5 +83,53 @@
 		max-width: 222px;
 		display: block;
 		padding-inline: 15px;
+
+		@include onPhone {
+			display: none;
+		}
+	}
+
+	&__menuBtn {
+		display: none;
+		flex-direction: column;
+		align-items: end;
+		gap: 12px;
+		width: 60px;
+		height: 30px;
+
+		@include onTablet {
+			display: flex;
+		}
+
+		span {
+			background-color: #fff;
+			height: 2px;
+			width: 100%;
+
+			&:nth-child(2) {
+				width: 40px;
+			}
+	
+			&:nth-child(3) {
+				width: 52px;
+			}
+		}
+
+		&--active {
+			span {
+				&:nth-child(1) {
+					width: 52px;
+					transform: translateX(-5px) rotate(-45deg) translateY(20px);
+				}
+	
+				&:nth-child(2) {
+					opacity: 0;
+				}
+		
+				&:nth-child(3) {
+					transform: translateX(-5px) rotate(45deg) translateY(-20px);
+				}
+			}
+		}
 	}
 }

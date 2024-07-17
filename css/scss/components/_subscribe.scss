@@ -1,6 +1,10 @@
 .subscribe {
 	padding-block: 120px;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__container {
 		background-color: $yellow-color;
 		position: relative;
@@ -30,6 +34,10 @@
 		margin-top: 50px;
 		display: flex;
 		gap: 16px;
+
+		@include onPhone {
+			flex-direction: column;
+		}
 	}
 
 	&__email {
@@ -40,6 +48,10 @@
 		line-height: 31px;
 		letter-spacing: 0.18px;
 		outline: none;
+
+		@include onPhone {
+			padding-block: 17px;
+		}
 
 		&::placeholder {
 			color: #B4C7E7;
@@ -55,22 +67,40 @@
 		letter-spacing: 0.18px;
 		color: #FFFFFF;
 		padding-inline: 120px;
-		
+
+		@include onTablet {
+			padding-inline: 20px;
+		}
+
 		&:hover {
 			border-color: $dark-blue-color;
 			color: $dark-blue-color;
+
+			@include onTablet {
+				background: $dark-blue-color;
+				color: #FFFFFF;
+			}
 		}
 	}
 
-	&__error-message, &__success-message {
+	&__error-message,
+	&__success-message {
 		position: absolute;
 		bottom: 60px;
 		left: 150px;
 		color: red;
 		display: none;
+
+		@include onTablet {
+			left: 35px;
+		}
+
+		@include onPhone {
+			left: 10px;
+		}
 	}
 
 	&__success-message {
-			color: green;
+		color: green;
 	}
 }

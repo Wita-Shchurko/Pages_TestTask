@@ -1,3 +1,15 @@
+@mixin onTablet {
+  @media (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+@mixin onPhone {
+  @media (max-width: $phone-max-width) {
+    @content;
+  }
+}
+
 @mixin circle {
 	&:before {
 		content: "";

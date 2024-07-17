@@ -1,15 +1,27 @@
 .reviews {
 	padding-block: 120px 130px;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 50px;
+
+		@include onTablet {
+			flex-direction: column;
+		}
 	}
 
 	&__text {
 		max-width: 435px;
+
+		@include onTablet {
+			max-width: 100%;
+		}
 	}
 
 	&__description {
@@ -49,5 +61,9 @@
 		display: grid;
 		grid-template: repeat(2, auto) / repeat(2, auto);
 		gap: 20px;
+
+		@include onPhone {
+			grid-template: repeat(3, auto) / 1fr;
+		}
 	}
 }

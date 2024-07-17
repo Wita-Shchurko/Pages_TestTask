@@ -34,15 +34,34 @@ $(document).ready(function(){
 		} else {
 				successMessage.text('Ви успішно підписались!').show();
 		}
-});
+	});
 
-$('.subscribe__email').on('input', function() {
-		$('.subscribe__error-message').hide();
-		$('.subscribe__success-message').hide();
-});
+	$('.subscribe__email').on('input', function() {
+			$('.subscribe__error-message').hide();
+			$('.subscribe__success-message').hide();
+	});
 
-function validateEmail(email) {
-		var regex = /^[^\s@]+@[^\s@]+$/;
-		return regex.test(email);
-}
+	function validateEmail(email) {
+			var regex = /^[^\s@]+@[^\s@]+$/;
+			return regex.test(email);
+	}
+
+	const $menuBtn = $(".header__menuBtn");
+	const $menu = $(".menu");
+	const $navLink = $(".menu__link");
+	const menuBtnDisplayStyle = $menuBtn.css("display");
+
+	$menuBtn.click(function() {
+			$menu.toggleClass("menu--active");
+			$(this).toggleClass("header__menuBtn--active");
+	});
+
+	if (menuBtnDisplayStyle) {
+			$navLink.each(function() {
+					$(this).click(function() {
+							$menu.removeClass("menu--active");
+							$menuBtn.removeClass("header__menuBtn--active");
+					});
+			});
+	}
 });

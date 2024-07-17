@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6, p {
 @import "./components/rating";
 @import "./components/review-card";
 @import "./components/articles-card";
+@import "./components/menu";
 
 @import "./components/header";
 @import "./components/initial";
@@ -36,6 +37,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 html {
 	scroll-behavior: smooth;
+
+	&:has(.menu--active) {
+    overflow: hidden;
+  }
 }
 
 .body {
@@ -49,4 +54,14 @@ html {
 	margin: 0 auto;
 	padding-inline: 70px;
 	max-width: 1440px;
+
+	@include onTablet {
+    padding-inline: 35px;
+		max-width: 880px;
+  }
+
+  @include onPhone {
+    padding-inline: 10px;
+		max-width: 500px;
+  }
 }

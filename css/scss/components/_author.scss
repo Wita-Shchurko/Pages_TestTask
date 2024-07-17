@@ -2,11 +2,20 @@
 	padding-block: 140px;
 	background-color: $light-bg-color;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__container {
 		position: relative;
 		display: flex;
 		gap: 30px;
 		justify-content: space-between;
+
+		@include onTablet {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
 	}
 
 	&__img-container {
@@ -25,7 +34,25 @@
 			max-width: 525px;
 			min-width: 300px;
 			max-height: 620px;
-	}
+		}
+
+		@include onTablet {
+			margin-top: 20px;
+			margin-inline: auto;
+
+			&::before {
+				width: 100%;
+				max-width: 425px;
+			}
+		}
+
+		@include onPhone {
+			&::before {
+				padding-top: calc(93% * 620 / 525);
+				width: 93%;
+				min-width: 200px;
+			}
+		}
 	}
 
 	&__img {
@@ -35,6 +62,17 @@
 		position: relative;
 		top: -30px;
 		left: -30px;
+
+		@include onTablet {
+			max-width: 425px;
+		}
+
+		@include onPhone {
+			top: -10px;
+			left: -10px;
+			width: 93%;
+			min-width: 200px;
+		}
 	}
 
 	&__info {
@@ -52,6 +90,7 @@
 		margin-top: 20px;
 		display: flex;
 		justify-content: space-between;
+
 	}
 
 	&__statistic-item {
@@ -67,6 +106,15 @@
 			font-size: 54px;
 			line-height: 77px;
 			color: $dark-blue-color;
+
+			@include onPhone {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+
+		@include onPhone {
+			max-width: 90px;
 		}
 	}
 
@@ -84,6 +132,14 @@
 		display: flex;
 		align-items: center;
 		gap: 40px;
+
+		@include onTablet {
+			margin-inline: auto;
+		}
+
+		@include onPhone {
+			flex-direction: column;
+		}
 	}
 
 	&__qr-code {
@@ -115,9 +171,18 @@
 		text-decoration: none;
 		transition: all $duration-time;
 
+		@include onPhone {
+			font-size: 17px;
+		}
+
 		&:hover {
 			color: $yellow-color;
 			text-decoration: underline;
+
+			@include onTablet {
+				color: #B4C7E7;
+				text-decoration: none;
+			}
 		}
 	}
 }

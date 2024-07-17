@@ -2,10 +2,19 @@
 	background: #F4F8FF;
 	padding-block: 130px 150px;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__wrapper {
 		display: grid;
 		grid-template: auto / repeat(3, 1fr);
 		gap: 20px;
 		margin-top: 96px;
+
+		@include onTablet {
+			grid-template: repeat(3, auto) / 1fr;
+			margin-top: 66px;
+		}
 	}
 }

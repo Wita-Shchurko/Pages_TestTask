@@ -3,9 +3,15 @@
 	padding-block: 70px;
 
 	&__container {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@include onTablet {
+			flex-direction: column;
+			gap: 30px;
+		}
 	}
 
 	&__title {
@@ -25,10 +31,20 @@
 
 	&__img {
 		max-width: 560px;
+
+		@include onTablet {
+			width: 100%;
+		}
 	}
 
 	&__btn {
 		margin-top: 27px;
 		color: #ffffff;
+
+		&:hover {
+			@include onTablet {
+				color: #ffffff;
+			}
+		}
 	}
 }

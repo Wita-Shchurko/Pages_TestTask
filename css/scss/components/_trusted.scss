@@ -1,16 +1,31 @@
 .trusted {
 	padding-block: 110px 130px;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__companies {
 		margin-top: 76px;
-		display: flex;
+		display: grid;
+		grid-template: auto / repeat(4, 1fr);
 		gap: 10px;
-		justify-content: space-between;
+
+		@include onTablet {
+			grid-template: repeat(2, auto) / repeat(2, 1fr);
+			gap: 20px;
+		}
+
+		@include onPhone {
+			grid-template: repeat(4, auto) / 1fr;
+			gap: 30px;
+		}
 	}
 
 	&__company {
 		max-width: 313px;
 		text-align: center;
+		justify-self: center;
 	}
 	
 	&__company-img {

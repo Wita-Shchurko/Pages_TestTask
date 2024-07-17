@@ -4,10 +4,19 @@
 	max-width: 364px;
 	height: min-content;
 
+	@include onPhone {
+		padding: 20px;
+	}
+
 	&--middle {
 		grid-column: 2 / 3;
 		grid-row: 1 / 3;
 		align-self: center;
+
+		@include onPhone {
+			grid-column: auto;
+			grid-row: auto;
+		}
 	}
 
 	&__circles {

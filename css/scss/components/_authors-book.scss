@@ -1,10 +1,20 @@
 .authors-book {
 	padding-block: 110px 90px;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 		gap: 30px;
 		margin-top: 96px;
+
+		@include onTablet {
+			flex-direction: column;
+			align-items: center;
+			margin-top: 66px;
+		}
 	}
 }

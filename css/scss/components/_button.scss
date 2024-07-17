@@ -17,6 +17,12 @@
 		border: 2px solid $yellow-color;
 		background-color: transparent;
 		color: $yellow-color;
+
+		@include onTablet {
+			border: 2px solid $yellow-color;
+			background-color: $yellow-color;
+			color: $dark-blue-color;
+		}
 	}
 
 	&--transparent {
@@ -26,6 +32,11 @@
 		&:hover {
 			background-color: $yellow-color;
 			color: #ffffff;
+
+			@include onTablet {
+				background-color: transparent;
+				color: $dark-blue-color;
+			}
 		}
 	}
 

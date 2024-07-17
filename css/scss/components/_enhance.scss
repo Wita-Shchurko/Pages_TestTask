@@ -2,12 +2,24 @@
 	background-color: #F4F8FF;
 	padding-block: 100px 120px;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__wrapper {
 		margin-top: 96px;
 		display: grid;
 		column-gap: 30px;
 		row-gap: 40px;
 		grid-template: repeat(2, auto) / repeat(2, auto);
+
+		@include onTablet {
+			margin-top: 66px;
+		}
+
+		@include onPhone {
+			grid-template: repeat(4, auto) / 1fr;
+		}
 	}
 
 	&__btn {
@@ -15,6 +27,11 @@
 		margin: 0 auto;
 		margin-top: 60px;
 		padding-inline: 92px;
+
+		@include onPhone {
+			padding-inline: 5px;
+			width: 100%;
+		}
 	}
 
 	&__addition {

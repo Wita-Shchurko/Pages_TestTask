@@ -2,11 +2,19 @@
 	padding-block: 100px;
 	background-color: $dark-blue-color;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__container {
 		display: grid;
 		grid-template: auto / auto minmax(auto, 632px);
 		justify-content: space-between;
 		gap: 15px;
+
+		@include onPhone {
+			grid-template: auto / auto;
+		}
 	}
 
 	&__text {
@@ -15,6 +23,10 @@
 		justify-content: center;
 		gap: 48px;
 		max-width: 562px;
+
+		@include onTablet {
+			gap: 20px;
+		}
 	}
 
 	&__title {
@@ -24,6 +36,11 @@
 		letter-spacing: 1.3px;
 		font-weight: 400;
 		margin: 0;
+
+		@include onTablet {
+			font-size: 46px;
+			line-height: 52px;
+		}
 	}
 
 	&__pretitle {
@@ -53,12 +70,28 @@
 		font-size: 18px;
 		line-height: 28px;
 		color: $light-color;
+
+		@include onTablet {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+	&__btn {
+		@include onPhone {
+			width: 100%;
+		}
 	}
 
 	&__btns {
 		display: flex;
 		gap: 50px;
 		align-items: center;
+
+		@include onTablet {
+			gap: 20px;
+			flex-wrap: wrap;
+		}
 	}
 
 	&__read-demo-link {
@@ -79,6 +112,12 @@
 			color: $yellow-color;
 			border-bottom: 1px solid $yellow-color;
 			transform: scale(1.1);
+
+			@include onTablet {
+				color: #FFFFFF;
+				border-bottom: 1px solid #ffffff;
+				transform: scale(1);
+			}
 		}
 	}
 
@@ -86,5 +125,13 @@
 		justify-self: center;
 		width: 100%;
 		max-width: 592px;
+
+		@include onTablet {
+			min-width: 200px;
+		}
+
+		@include onPhone {
+			display: none;
+		}
 	}
 }

@@ -1,12 +1,24 @@
 .what-will-you-learn {
 	padding-block: 120px 140px;
 
+	@include onTablet {
+		padding-block: 60px;
+	}
+
 	&__wrapper {
 		display: flex;
 		gap: 40px;
 		justify-content: space-between;
 		align-items: center;
 		margin-top: 116px;
+
+		@include onTablet {
+			flex-direction: column;
+		}
+
+		@include onPhone {
+			margin-top: 66px;
+		}
 	}
 
 	&__list {
@@ -14,6 +26,10 @@
 		grid-template: repeat(2, auto) / repeat(2, auto);
 		gap: 30px;
 		max-width: 636px;
+
+		@include onPhone {
+			grid-template: repeat(4, auto) / 1fr;
+		}
 	}
 
 	&__item {
@@ -59,6 +75,15 @@
 			left: 0;
 			background: transparent;
 			border: 10px solid $yellow-color;
+
+			@include onTablet {
+				max-width: 335px;
+			}
+
+			@include onPhone {
+				padding-top: calc(93% * 630 / 535);
+				width: 93%;
+			}
 		}
 	}
 
@@ -69,5 +94,15 @@
 		position: relative;
 		top: -30px;
 		left: -30px;
+
+		@include onTablet {
+			max-width: 335px;
+		}
+
+		@include onPhone {
+			top: -10px;
+			left: -10px;
+			width: 93%;
+		}
 	}
 }

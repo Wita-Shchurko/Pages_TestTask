@@ -3,7 +3,11 @@
 	background-color: #ffffff;
 	display: flex;
 	flex-direction: column;
-	height: 100%; /* Забезпечує, що картка займає всю висоту */
+	height: 100%; 
+
+	@include onTablet {
+		padding: 20px;
+	}
 
 	&__title {
 			font-family: 'Cardo';
